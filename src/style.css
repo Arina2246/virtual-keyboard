@@ -100,12 +100,17 @@ body{
 }
 .button:hover{ 
     background-color: #CB65FB;
-    
+    cursor: pointer;
 }
 .button:active {
-    border-radius: 15px;
+    border-radius: 25px;
     background-color: #EC89DA;
-    transition: 0.5s;
+    transition: 0.05s;
+}
+.button.activeButton {
+    border-radius: 25px;
+    background-color: #EC89DA;
+    transition: 0.05s;
 }
 .buttonBackspace{
     width: 170px;
@@ -123,14 +128,25 @@ body{
     width: 150px;
 }
 .buttonSpace{
-    width: 540px;
+    width: 510px;
 }
+.buttonCtrlRight{
+    width: 80px;
+   }
 .specButton{
    /* background-color: #85008F;  */
    background-color: rgba(0, 0, 0, 0); 
-   
 }
 .hide{
     position: fixed;
     opacity: 0;
+}
+.buttonArrowUp {
+    transform: rotate(90deg);
+}
+.buttonArrowDown {
+    transform: rotate(-90deg);
+}
+.buttonArrowRight {
+    transform: rotate(180deg);
 }
