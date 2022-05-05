@@ -23,7 +23,7 @@ wrapperAdd.addKeyboardLine4();
 wrapperAdd.addKeyboardLine5();
 language.addLanguage();
 // менять язык
-language.deleteEng();
+// language.deleteEng();
 elementLanguageAdd.addEngLabels();
 elementLanguageAdd.addRusLabels();
 elementLabelAdd.addDown();
@@ -38,3 +38,8 @@ elementLabelAdd.hideShiftCaps();
 specButtonss.addKeyboardButtons();
 specButtonss.addDisplayButtons();
 highlight.addHighlight();
+if (localStorage.lang === "eng") {
+  language.deleteRus();
+} else {
+  language.deleteEng();
+}

@@ -31,7 +31,7 @@ class ElementsAdd {
     const p1 = document.createElement("p");
     const p2 = document.createElement("p");
     p1.innerHTML = "Keyboard for Windows";
-    p2.innerHTML = "Press Shift+Alt to change language";
+    p2.innerHTML = "Press Ctrl+Alt to change language";
     document.querySelector(".content").append(p1);
     document.querySelector(".content").append(p2);
   }
