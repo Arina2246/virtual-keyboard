@@ -5,26 +5,88 @@ class SpecButtons {
     const buttons = document.querySelectorAll(".caps");
     const up = document.querySelectorAll(".up");
     const shiftcaps = document.querySelectorAll(".shiftCaps");
+    document.querySelector(".buttonBackspace").addEventListener("click", () => {
+      const start = document.querySelector("textArea").selectionStart;
+      let text = document.querySelector("textArea").value;
+      text = text.slice(0, start - 1) + text.slice(start);
+      document.querySelector("textArea").value = text;
+      document.querySelector("textArea").selectionEnd = start - 1;
+      document.querySelector("textArea").focus();
+    });
+    document.querySelector(".buttonEnter").addEventListener("click", () => {
+      document
+        .querySelector("textArea")
+        .setRangeText(
+          "\n",
+          document.querySelector("textArea").selectionStart,
+          document.querySelector("textArea").selectionEnd,
+          "end"
+        );
+      document.querySelector("textArea").focus();
+    });
+    document.querySelector(".buttonDelete").addEventListener("click", () => {
+      const start = document.querySelector("textArea").selectionStart;
+      let text = document.querySelector("textArea").value;
+      text = text.slice(0, start) + text.slice(start + 1);
+      document.querySelector("textArea").value = text;
+      document.querySelector("textArea").selectionEnd = start;
+      document.querySelector("textArea").focus();
+    });
     document.querySelector(".buttonTab").addEventListener("click", () => {
-      document.querySelector("textArea").value += "    ";
+      document
+        .querySelector("textArea")
+        .setRangeText(
+          "    ",
+          document.querySelector("textArea").selectionStart,
+          document.querySelector("textArea").selectionEnd,
+          "end"
+        );
       document.querySelector("textArea").focus();
     });
     document.querySelector(".buttonArrowLeft").addEventListener("click", () => {
-      document.querySelector("textArea").value += "◄";
+      document
+        .querySelector("textArea")
+        .setRangeText(
+          "◄",
+          document.querySelector("textArea").selectionStart,
+          document.querySelector("textArea").selectionEnd,
+          "end"
+        );
       document.querySelector("textArea").focus();
     });
     document.querySelector(".buttonArrowUp").addEventListener("click", () => {
-      document.querySelector("textArea").value += "▲";
+      document
+        .querySelector("textArea")
+        .setRangeText(
+          "▲",
+          document.querySelector("textArea").selectionStart,
+          document.querySelector("textArea").selectionEnd,
+          "end"
+        );
       document.querySelector("textArea").focus();
     });
     document
       .querySelector(".buttonArrowRight")
       .addEventListener("click", () => {
-        document.querySelector("textArea").value += "►";
+        document
+          .querySelector("textArea")
+          .setRangeText(
+            "►",
+            document.querySelector("textArea").selectionStart,
+            document.querySelector("textArea").selectionEnd,
+            "end"
+          );
         document.querySelector("textArea").focus();
       });
     document.querySelector(".buttonArrowDown").addEventListener("click", () => {
-      document.querySelector("textArea").value += "▼";
+      document
+        .querySelector("textArea")
+        .setRangeText(
+          "▼",
+          document.querySelector("textArea").selectionStart,
+          document.querySelector("textArea").selectionEnd,
+          "end"
+        );
       document.querySelector("textArea").focus();
     });
     document.querySelector(".buttonCapsLock").addEventListener("click", () => {
@@ -246,7 +308,14 @@ class SpecButtons {
       // tab
       if (event.which === 9) {
         event.preventDefault();
-        document.querySelector("textArea").value += "    ";
+        document
+          .querySelector("textArea")
+          .setRangeText(
+            "    ",
+            document.querySelector("textArea").selectionStart,
+            document.querySelector("textArea").selectionEnd,
+            "end"
+          );
       }
       // alt
       if (event.which === 18) {
@@ -309,19 +378,47 @@ class SpecButtons {
       }
       if (event.which === 37) {
         event.preventDefault();
-        document.querySelector("textArea").value += "◄";
+        document
+          .querySelector("textArea")
+          .setRangeText(
+            "◄",
+            document.querySelector("textArea").selectionStart,
+            document.querySelector("textArea").selectionEnd,
+            "end"
+          );
       }
       if (event.which === 38) {
         event.preventDefault();
-        document.querySelector("textArea").value += "▲";
+        document
+          .querySelector("textArea")
+          .setRangeText(
+            "▲",
+            document.querySelector("textArea").selectionStart,
+            document.querySelector("textArea").selectionEnd,
+            "end"
+          );
       }
       if (event.which === 39) {
         event.preventDefault();
-        document.querySelector("textArea").value += "►";
+        document
+          .querySelector("textArea")
+          .setRangeText(
+            "►",
+            document.querySelector("textArea").selectionStart,
+            document.querySelector("textArea").selectionEnd,
+            "end"
+          );
       }
       if (event.which === 40) {
         event.preventDefault();
-        document.querySelector("textArea").value += "▼";
+        document
+          .querySelector("textArea")
+          .setRangeText(
+            "▼",
+            document.querySelector("textArea").selectionStart,
+            document.querySelector("textArea").selectionEnd,
+            "end"
+          );
       }
     };
   }

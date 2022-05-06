@@ -15,7 +15,8 @@
         "class-methods-use-this": ["error", { "exceptMethods": ["addEngLabels", "addRusLabels","addDown","hideDown","addUp","hideUp","addCaps","hideCaps","addShiftCaps","hideShiftCaps","addHighlight","addLanguage","addWrapperHeader","addWrapper","deleteRus","deleteEng","addKeyboardButtons","addTextArea","addContent","addContentP","addWrapperKeyboard","addKeyboardLine1","addKeyboardLine2","addKeyboardLine3","addKeyboardLine4","addKeyboardLine5","addDisplayButtons"] }],
        "func-names": ["error", "never"],
        "import/extensions": ["error",  "always" ],
-       "operator-linebreak": ["error", "after"]
+       "operator-linebreak": ["error", "after"],
+       "comma-dangle": ["error", "never"]
     }
 }
 
