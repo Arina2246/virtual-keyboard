@@ -14,6 +14,18 @@ export default class SpecButtons {
       document.querySelector('textArea').selectionEnd = start - 1;
       document.querySelector('textArea').focus();
     });
+    document.querySelector('.buttonAltLeft').addEventListener('click', () => {
+      document.querySelector('textArea').focus();
+    });
+    document.querySelector('.buttonAltRight').addEventListener('click', () => {
+      document.querySelector('textArea').focus();
+    });
+    document.querySelector('.buttonCtrlLeft').addEventListener('click', () => {
+      document.querySelector('textArea').focus();
+    });
+    document.querySelector('.buttonCtrlRight').addEventListener('click', () => {
+      document.querySelector('textArea').focus();
+    });
     document.querySelector('.buttonEnter').addEventListener('click', () => {
       document
         .querySelector('textArea')
